@@ -1,1 +1,22 @@
-# Hello ji Changa Si
+        
+def main(naam):
+    print("Namaskar Deviyon Aur Sajaano Aap Sabhi Ka Swagat Hai Kaun Banega Crorepati Me!")
+    print(f"Toh Aaj Humare Sath Hai {naam} Ji, Chaliye Shuru Karte hai Bina Kisi Deri Ke...")
+    money = 0
+    print("\n\nPehla Padav Shuru Hota Hai")
+    for question, answer in q.Level_1().items():
+        print(f"Question: {question}")
+        for idx, option in enumerate(answer["options"], 1):
+            print(f"{idx}. {option}")
+        
+        
+        user_answer = int(input("Choose the correct answer (1-4): "))
+        
+        
+        if answer["options"][user_answer - 1] == answer["correct_answer"]:
+            print("Correct! ")
+            money += 10000  
+        else:
+            print(f"Afsos Galat Jawab! Sahi Jawab hai: {answer['correct_answer']}")
+            print(f"Bohot hi acha Khele aap! Par aapka Khel Yahi Samapt Hota Hai Aur Aaj Aap Sirf {money} rupee Hi Le Ja Payenge! \n\t\tDhanyawad Aapka Radhe Radhe")
+            break  
