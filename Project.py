@@ -1,4 +1,6 @@
-# Kaun Banega Crorepati Game
+# Kaun Banega Crorepati Game 
+# Well This Project Is Terminal Based
+
 import random as rd
 import Questions as q
         
