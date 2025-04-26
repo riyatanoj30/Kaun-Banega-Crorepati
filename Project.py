@@ -1,5 +1,5 @@
 # Kaun Banega Crorepati Game
-
+import random as rd
 import Questions as q
         
 def main(naam):
@@ -7,7 +7,11 @@ def main(naam):
     print(f"Toh Aaj Humare Sath Hai {naam} Ji, Chaliye Shuru Karte hai Bina Kisi Deri Ke...")
     money = 0
     print("\n\nPehla Padav Shuru Hota Hai")
-    for question, answer in q.Level_1().items():
+    
+    questions = list(q.Level_1().items())
+    rd.shuffle(questions)
+    
+    for question, answer in questions:
         print(f"Question: {question}")
         for idx, option in enumerate(answer["options"], 1):
             print(f"{idx}. {option}")
@@ -28,7 +32,11 @@ def main(naam):
         print("\n\n Badhai Ho! Aapne Badi Hi Safalta Se Pehla Padav Paar Kar Liya.")
         print(f"Aapki Kul Dhan Rashi Ho Chuki Hai {money} rupee!")
         print("\n\n Agle Padav Ke Sawal Ye Rahe Aapke Screen Par")
-        for question, answer in q.Level_2().items():
+        
+        questions = list(q.Level_2().items())
+        rd.shuffle(questions)
+        
+        for question, answer in questions:
             print(f"Question: {question}")
             for idx, option in enumerate(answer["options"], 1):
                 print(f"{idx}. {option}")
@@ -51,7 +59,11 @@ def main(naam):
         print("\n\n Badhai Ho! Aapne Badi Hi Safalta Se Dusra Padav Paar Kar Liya.")
         print(f"Aapki Kul Dhan Rashi Ho Chuki Hai {money} rupee!")
         print("\n\n Agle Padav Ke Sawal Ye Rahe Aapke Screen Par")
-        for question, answer in q.Level_3().items():
+        
+        questions = list(q.Level_3().items())
+        rd.shuffle(questions)
+        
+        for question, answer in questions:
             print(f"Question: {question}")
             for idx, option in enumerate(answer["options"], 1):
                 print(f"{idx}. {option}")
