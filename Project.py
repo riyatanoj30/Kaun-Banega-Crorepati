@@ -20,3 +20,31 @@ def main(naam):
             print(f"Afsos Galat Jawab! Sahi Jawab hai: {answer['correct_answer']}")
             print(f"Bohot hi acha Khele aap! Par aapka Khel Yahi Samapt Hota Hai Aur Aaj Aap Sirf {money} rupee Hi Le Ja Payenge! \n\t\tDhanyawad Aapka Radhe Radhe")
             break  
+        
+        
+        
+        if money == 50000:
+            print("\n\n Badhai Ho! Aapne Badi Hi Safalta Se Pehla Padav Paar Kar Liya.")
+            print(f"Aapki Kul Dhan Rashi Ho Chuki Hai {money} rupee!")
+            print("\n\n Agle Padav Ke Sawal Ye Rahe Aapke Screen Par")
+            for question, answer in q.Level_2().items():
+                print(f"Question: {question}")
+                for idx, option in enumerate(answer["options"], 1):
+                    print(f"{idx}. {option}")
+            
+                
+                user_answer = int(input("Choose the correct answer (1-4): "))
+            
+            
+                if answer["options"][user_answer - 1] == answer["correct_answer"]:
+                    print("Correct! ")
+                    money += 500000  
+                else:
+                    print(f"Afsos Galat Jawab! Sahi Jawab hai: {answer['correct_answer']}")
+                    print(f"Bohot hi acha Khele aap! Par aapka Khel Yahi Samapt Hota Hai Aur Aaj Aap Sirf {money} rupee Hi Le Ja Payenge! \n\t\tDhanyawad Aapka Radhe Radhe")
+                    break  
+        else:
+            print("Khel Samapt Ho Gaya")
+            
+            
+        
